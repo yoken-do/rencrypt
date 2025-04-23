@@ -9,8 +9,8 @@
 #' @return The encrypted ciphertext
 #' @export
 #' @examples
-#' vigener_encrypt("HELLO", "A", "KEY", 26)
-vigener_encrypt <- function(msg, beginning, key_word, mod) {
+#' vigenere_encrypt("HELLO", "A", "KEY", 26)
+vigenere_encrypt <- function(msg, beginning, key_word, mod) {
   res <- ""
   beg_int <- utf8ToInt(beginning)
   kw <- unlist(strsplit(by_key_word_letters(msg, key_word), ""))
@@ -31,9 +31,9 @@ vigener_encrypt <- function(msg, beginning, key_word, mod) {
 #' @param mod The modulus value (must match encryption modulus)
 #' @return The decrypted plaintext
 #' @examples
-#' vigener_decrypt("RIJVS", "A", "KEY", 26)
+#' vigenere_decrypt("RIJVS", "A", "KEY", 26)
 #' @export
-vigener_decrypt <- function(encrypted_msg, beginning, key_word, mod) {
+vigenere_decrypt <- function(encrypted_msg, beginning, key_word, mod) {
   decrypted <- ""
   beg_int <- utf8ToInt(beginning)
   kw <- unlist(strsplit(by_key_word_letters(encrypted_msg, key_word), ""))
