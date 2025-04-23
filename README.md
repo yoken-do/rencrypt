@@ -27,7 +27,7 @@ Matrix-based polygraphic substitution
 
 ``` r
 library(rencrypt)
-msg <- "Hello, world!"
+msg <- "HELLO"
 key <- matrix(c(1,3,2,4), nrow=2) # 2x2 encryption matrix
 encrypted_msg <- hill_encrypt(msg, "A", key, 33)
 print(encrypted_msg)
