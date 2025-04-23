@@ -1,6 +1,6 @@
 #' rencrypt: educational package implementing classical encryption algorithms
 #'
-#' Basic usage:
+#'  Implements basic cryptographic algorithms (Hill cipher etc.) for educational purposes in R. Created by students for learning R package development and cryptography basics.
 #'
 #' Implemented Algorithms:
 #' \code{\link{hill_encrypt}} and \code{\link{hill_decrypt}},

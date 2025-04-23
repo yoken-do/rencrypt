@@ -4,7 +4,7 @@
 \alias{rencrypt}
 \title{rencrypt: educational package implementing classical encryption algorithms}
 \description{
-Basic usage:
+Implements basic cryptographic algorithms (Hill cipher etc.) for educational purposes in R. Created by students for learning R package development and cryptography basics.
 }
 \details{
 Implemented Algorithms:
