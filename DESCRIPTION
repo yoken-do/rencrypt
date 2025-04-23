@@ -2,7 +2,7 @@ Package: rencrypt
 Title: A simple implementation of cryptographic algorithms
 Version: 0.0.0.9000
 Authors@R: 
-    person("Encrypt", "Team", role = c("aut", "cre"),
+    person("Encrypt", "Team", email = "noreply@example.com", role = c("aut", "cre"), 
            comment = c(github = "yoken-do"))
 Description: Implements basic cryptographic algorithms (Hill cipher etc.) for educational purposes in R. Created by students for learning R package development and cryptography basics.
 License: MIT + file LICENSE
