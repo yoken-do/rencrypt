@@ -7,13 +7,23 @@
 hill_encrypt(text, beginning, key_matrix, mod)
 }
 \arguments{
-\item{text}{input message}
+\item{text}{the message that we will encrypt}
 
-\item{key_matrix}{key matrix}
+\item{beginning}{alphabet detection by initial letter}
+
+\item{key_matrix}{square matrix of size NxN}
+
+\item{mod}{the value of the module that we will be working with}
 }
 \value{
-encrypted message
+our encrypted message
 }
 \description{
 Encrypts a plaintext message using the Hill cipher algorithm, a polygraphic substitution cipher based on linear algebra.
+}
+\examples{
+msg <- "HELLO"
+key <- matrix(c(1,3,2,4), nrow=2)
+encrypted_msg <- hill_encrypt(msg, "A", key, 33)
+print(encrypted_msg)
 }

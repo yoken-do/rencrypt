@@ -19,3 +19,7 @@ Decrypted message
 \description{
 Decrypts a message encrypted with the Caesar cipher
 }
+\examples{
+decrypted_msg <- caesar_decrypt("abcdefghijklmnopqrstuvwxyz", 3, "khoor")
+print(decrypted_msg)
+}

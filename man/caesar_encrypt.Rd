@@ -19,3 +19,7 @@ Encrypted message
 \description{
 Encrypts a message using the Caesar cipher algorithm
 }
+\examples{
+encrypted_msg <- caesar_encrypt("abcdefghijklmnopqrstuvwxyz", 3, "hello")
+print(encrypted_msg)
+}

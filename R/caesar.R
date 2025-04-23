@@ -6,6 +6,9 @@
 #' @param message Character string to be encrypted
 #' @return Encrypted message
 #' @export
+#' @examples
+#' encrypted_msg <- caesar_encrypt("abcdefghijklmnopqrstuvwxyz", 3, "hello")
+#' print(encrypted_msg)
 caesar_encrypt <- function(alphabet, shift, message) {
 
   message_chars <- unlist(strsplit(message, ""))
@@ -46,6 +49,9 @@ caesar_encrypt <- function(alphabet, shift, message) {
 #' @param encrypted_message Character string to be decrypted
 #' @return Decrypted message
 #' @export
+#' @examples
+#' decrypted_msg <- caesar_decrypt("abcdefghijklmnopqrstuvwxyz", 3, "khoor")
+#' print(decrypted_msg)
 caesar_decrypt <- function(alphabet, shift, encrypted_message) {
   caesar_encrypt(alphabet, -shift, encrypted_message)
 }

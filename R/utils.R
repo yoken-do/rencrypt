@@ -25,8 +25,8 @@ matrix_mod_inv <- function(mat, mod) {
   det_inv <- mod_inv(det_val, mod)
 
   if (is.na(det_inv)) {
-    stop("Матрица необратима по модулю ", mod,
-         ": det = ", det_val, " не имеет обратного")
+    stop("Matrix is not invertible modulo ", mod,
+         " (determinant = ", det_val, " has no modular inverse)")
   }
 
   adjugate <- t(matrix(
@@ -37,4 +37,21 @@ matrix_mod_inv <- function(mat, mod) {
 
   inv_mat <- (adjugate * det_inv) %% mod
   return(matrix(round(inv_mat), nrow = 2))
+}
+
+by_key_word_letters <- function(msg, key_word) {
+  res <- ""
+  len_msg <- nchar(msg)
+  len_key_word <- nchar(key_word)
+  if (len_msg > len_key_word) {
+    repeats <- floor(len_msg / len_key_word)
+    tail <- len_msg %% len_key_word
+    res <- strrep(key_word, repeats)
+    if (tail > 0) {
+      res <- paste0(res, substr(key_word, 1, tail))
+    }
+  } else {
+    res <- substr(key_word, 1, len_msg)
+  }
+  return(res)
 }

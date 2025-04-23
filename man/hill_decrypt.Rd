@@ -7,13 +7,23 @@
 hill_decrypt(ciphertext, beginning, key_matrix, mod)
 }
 \arguments{
-\item{ciphertext}{encrypted message}
+\item{ciphertext}{the message that we will decode}
 
-\item{key_matrix}{key matrix (inverse of encryption key matrix)}
+\item{beginning}{alphabet detection by initial letter}
+
+\item{key_matrix}{square matrix of size NxN}
+
+\item{mod}{the value of the module that we will be working with}
 }
 \value{
-decrypted message
+our decrypted message
 }
 \description{
 Decrypts a ciphertext message that was encrypted using the Hill cipher algorithm.
+}
+\examples{
+msg <- "PEALOJ"
+key <- matrix(c(1,3,2,4), nrow=2)
+decrypted_msg <- hill_decrypt(msg, "A", key, 33)
+print(decrypted_msg)
 }

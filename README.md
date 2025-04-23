@@ -2,24 +2,46 @@
 # rencrypt
 
 <!-- badges: start -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) **→ Added license badge**
 <!-- badges: end -->
 
-The goal of rencrypt is to ...
+An educational package implementing classical encryption algorithms 
 
 ## Installation
 
-You can install the development version of rencrypt like so:
+Install the development version from GitHub:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# Install devtools if not already installed
+if (!require("devtools")) install.packages("devtools")
+
+# Install rencrypt
+devtools::install_github("yoken-do/rencrypt")
 ```
 
-## Example
+## Basic Usage
 
-This is a basic example which shows you how to solve a common problem:
+### Hill Cipher Example
+
+Matrix-based polygraphic substitution
 
 ``` r
 library(rencrypt)
-## basic example code
+msg <- "Hello, world!"
+key <- matrix(c(1,3,2,4), nrow=2) # 2x2 encryption matrix
+encrypted_msg <- hill_encrypt(msg, "A", key, 33)
+print(encrypted_msg)
+decrypted_msg <- hill_decrypt(encrypted_msg, "A", key, 33)
+print(decrypted_msg)
 ```
+
+## Implemented Algorithms
+
+- Hill Cipher (polygraphic substitution cipher)
+- Caesar Cipher (shift cipher)
+- Vigenère Cipher (polyalphabetic substitution)
+
+## Educational Purpose
+
+⚠️ This package is for educational use only 
 
