@@ -8,8 +8,8 @@ Basic usage:
 }
 \details{
 Implemented Algorithms:
-\code{\link{hill_encrypt}} and \code{\link{hill_decrypt}}
-\code{\link{caesar_encrypt}} and \code{\link{caesar_decrypt}}
+\code{\link{hill_encrypt}} and \code{\link{hill_decrypt}},
+\code{\link{caesar_encrypt}} and \code{\link{caesar_decrypt}},
 \code{\link{vigenere_encrypt}} and \code{\link{vigenere_decrypt}}
 }
 \section{Main functions}{
