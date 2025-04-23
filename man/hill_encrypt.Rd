@@ -4,7 +4,7 @@
 \alias{hill_encrypt}
 \title{Hill Cipher Encryption}
 \usage{
-hill_encrypt(text, key_matrix)
+hill_encrypt(text, beginning, key_matrix, mod)
 }
 \arguments{
 \item{text}{input message}

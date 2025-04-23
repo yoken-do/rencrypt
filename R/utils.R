@@ -1,4 +1,17 @@
+# for Hill Cipher Encryption
+
+text_to_num <- function(text, beginning) {
+  text <- toupper(text)
+  utf8ToInt(text) - utf8ToInt(beginning)
+}
+
+num_to_text <- function(nums, beginning) {
+  intToUtf8(nums + utf8ToInt(beginning))
+}
+
 mod_inv <- function(a, m) {
+  if (a == 0) return(NA)
+  a <- a %% m
   for (i in 1:m) {
     if ((a * i) %% m == 1) {
       return(i)
@@ -24,13 +37,4 @@ matrix_mod_inv <- function(mat, mod) {
 
   inv_mat <- (adjugate * det_inv) %% mod
   return(matrix(round(inv_mat), nrow = 2))
-}
-
-text_to_num <- function(text) {
-  text <- toupper(gsub("[^A-Z]", "", text))
-  utf8ToInt(text) - utf8ToInt('A')  # A=0, B=1, ..., Z=25
-}
-
-num_to_text <- function(nums) {
-  intToUtf8(nums + utf8ToInt('A'))
 }

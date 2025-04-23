@@ -4,7 +4,7 @@
 \alias{hill_decrypt}
 \title{Hill Cipher Decryption}
 \usage{
-hill_decrypt(ciphertext, key_matrix)
+hill_decrypt(ciphertext, beginning, key_matrix, mod)
 }
 \arguments{
 \item{ciphertext}{encrypted message}
