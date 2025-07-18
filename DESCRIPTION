@@ -1,0 +1,17 @@
+Package: rencrypt
+Title: A simple implementation of cryptographic algorithms
+Version: 0.0.0.9000
+Authors@R: 
+    person("yoken", "-do", email = "noreply@example.com", role = c("aut", "cre"),
+           comment = c(github = "yoken-do"))
+Description: Implements basic cryptographic algorithms (Hill cipher etc.) for educational purposes in R. Created by students for learning R package development and cryptography basics.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.0.0)
+URL: https://github.com/yoken-do/rencrypt
+BugReports: https://github.com/yoken-do/rencrypt/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

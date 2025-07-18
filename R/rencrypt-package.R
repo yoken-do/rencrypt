@@ -1,0 +1,21 @@
+#' rencrypt: educational package implementing classical encryption algorithms
+#'
+#'  Implements basic cryptographic algorithms (Hill cipher etc.) for educational purposes in R. Created by students for learning R package development and cryptography basics.
+#'
+#' Implemented Algorithms:
+#' \code{\link{hill_encrypt}} and \code{\link{hill_decrypt}},
+#' \code{\link{caesar_encrypt}} and \code{\link{caesar_decrypt}},
+#' \code{\link{vigenere_encrypt}} and \code{\link{vigenere_decrypt}}
+#'
+#' @section Main functions:
+#' \itemize{
+#'   \item \code{\link{hill_encrypt}}: Encrypts a plaintext message using the Hill cipher algorithm, a polygraphic substitution cipher based on linear algebra.
+#'   \item \code{\link{hill_decrypt}}: Decrypts a ciphertext message that was encrypted using the Hill cipher algorithm.
+#'   \item \code{\link{caesar_encrypt}}: Encrypts a message using the Caesar cipher algorithm
+#'   \item \code{\link{caesar_decrypt}}: Decrypts a message encrypted with the Caesar cipher
+#'   \item \code{\link{vigenere_encrypt}}: Encrypts a plaintext message using the Vigenère cipher algorithm, a polyalphabetic substitution cipher
+#'   \item \code{\link{vigenere_decrypt}}: Decrypts a message encrypted with the Vigenère cipher algorithm
+#' }
+#'
+#' @name rencrypt
+NULL
